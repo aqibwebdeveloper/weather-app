@@ -37,7 +37,7 @@
 
                 <input type="text" id="search" placeholder="Search city...">
 
-                <button type="button" id="search-btn">
+                <button type="button" id="search-btn" onclick="citySearch()">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>
@@ -60,16 +60,15 @@
                     <div class="weather-top">
 
                         <div>
-                            <h2>
+                            <h2 id="location-name">
                                 <i class="fa-solid fa-location-dot"></i>
-                                Karachi
                             </h2>
-                            <p>Sindh, Pakistan</p>
+                            <p id="location-country-name"></p>
                         </div>
 
                         <div class="date">
-                            <p>Friday, 25 sep 2026</p>
-                            <span>6:10 PM</span>
+                            <p id="day&time">Friday, 25 sep 2026</p>
+                            <span id="time">6:10 PM</span>
                         </div>
 
                     </div>
@@ -83,13 +82,13 @@
                         </div>
                         <!-- temperature -->
                         <div class="temperature">
-                            <span>32</span>
+                            <span id="temp">32</span>
                             <sup>°C</sup>
                         </div>
 
-                        <h3>Partly Cloudy</h3>
+                        <h3 id="weather-name">Partly Cloudy</h3>
 
-                        <p class="high-low">
+                        <p class="high-low" id="High-Low">
                             H: 34° &nbsp;&nbsp; L: 26°
                         </p>
                     </div>
@@ -108,39 +107,39 @@
                     <div class="hourly">
 
                         <div class="hour">
-                            <p>6 PM</p>
+                            <p id="forecast-time-1">6 PM</p>
                             <i class="fa-solid fa-cloud-sun"></i>
-                            <h3>31°</h3>
+                            <h3 id="forecast-temp-1">31°</h3>
                         </div>
 
                         <div class="hour">
-                            <p>7 PM</p>
+                            <p id="forecast-time-2">7 PM</p>
                             <i class="fa-solid fa-cloud-sun"></i>
-                            <h3>30°</h3>
+                            <h3 id="forecast-temp-2">30°</h3>
                         </div>
 
                         <div class="hour">
-                            <p>8 PM</p>
+                            <p id="forecast-time-3">8 PM</p>
                             <i class="fa-solid fa-cloud-sun"></i>
-                            <h3>29°</h3>
+                            <h3 id="forecast-temp-3">29°</h3>
                         </div>
 
                         <div class="hour">
-                            <p>9 PM</p>
+                            <p id="forecast-time-4">9 PM</p>
                             <i class="fa-solid fa-cloud-sun"></i>
-                            <h3>28°</h3>
+                            <h3 id="forecast-temp-4">28°</h3>
                         </div>
 
                         <div class="hour">
-                            <p>10 PM</p>
+                            <p id="forecast-time-5">10 PM</p>
                             <i class="fa-solid fa-cloud-sun"></i>
-                            <h3>27°</h3>
+                            <h3 id="forecast-temp-5">27°</h3>
                         </div>
 
                         <div class="hour">
-                            <p>11 PM</p>
+                            <p id="forecast-time-6">11 PM</p>
                             <i class="fa-solid fa-cloud-sun"></i>
-                            <h3>27°</h3>
+                            <h3 id="forecast-temp-6">27°</h3>
                         </div>
 
 
@@ -159,28 +158,28 @@
                         <div class="detail">
                             <i class="fa-solid fa-droplet"></i>
                             <p>Humidity</p>
-                            <h3>68%</h3>
+                            <h3 id="humidity"></h3>
                         </div>
 
                         <!-- detail 2 -->
                         <div class="detail">
                             <i class="fa-solid fa-wind"></i>
                             <p>Wind Speed</p>
-                            <h3>18 km/h</h3>
+                            <h3 id="speed"></h3>
                         </div>
 
                         <!-- detail 3 -->
                         <div class="detail">
                             <i class="fa-solid fa-gauge-high"></i>
                             <p>Pressure</p>
-                            <h3>1008 hPa</h3>
+                            <h3 id="pressure"></h3>
                         </div>
 
                         <!-- detail 4 -->
                         <div class="detail">
                             <i class="fa-solid fa-eye"></i>
                             <p>Visibility</p>
-                            <h3>10 km</h3>
+                            <h3 id="visibility"></h3>
                         </div>
 
                         <!-- detail 5 -->
@@ -195,7 +194,7 @@
                         <div class="detail">
                             <i class="fa-solid fa-temperature-half"></i>
                             <p>Feels Like</p>
-                            <h3>34°</h3>
+                            <h3 id="feels-like"></h3>
                         </div>
                     </div>
 
@@ -211,19 +210,19 @@
                 <!-- 7 Day Forecast -->
 
                 <div class="forecast-card">
-                    <h2>7 Day Forcast</h2>
+                    <h2>5 Day Forcast</h2>
 
                     <div class="forecast active">
 
                         <i class="fa-solid fa-cloud-sun"></i>
 
                         <div class="forecast-info">
-                            <h3>Fri</h3>
-                            <p>Partly Cloudy</p>
+                            <h3 id="forecast-day-1">Fri</h3>
+                            <p id="forecast-description-1">Partly Cloudy</p>
                         </div>
 
-                        <strong>34°</strong>
-                        <span>26°</span>
+                        <strong id="forecast-max-1">34°</strong>
+                        <span id="forecast-min-1">26°</span>
 
                     </div>
 
@@ -233,12 +232,12 @@
                         <i class="fa-solid fa-cloud-sun"></i>
 
                         <div class="forecast-info">
-                            <h3>Sat</h3>
-                            <p>Sunny</p>
+                            <h3 id="forecast-day-2">Sat</h3>
+                            <p id="forecast-description-2">Sunny</p>
                         </div>
 
-                        <strong>33°</strong>
-                        <span>25°</span>
+                        <strong id="forecast-max-2">33°</strong>
+                        <span id="forecast-min-2">25°</span>
 
                     </div>
 
@@ -247,12 +246,12 @@
                         <i class="fa-solid fa-cloud-sun"></i>
 
                         <div class="forecast-info">
-                            <h3>Sun</h3>
-                            <p>Sunny</p>
+                            <h3 id="forecast-day-3">Sun</h3>
+                            <p id="forecast-description-3">Sunny</p>
                         </div>
 
-                        <strong>32°</strong>
-                        <span>24°</span>
+                        <strong id="forecast-max-3">32°</strong>
+                        <span id="forecast-min-3">24°</span>
 
                     </div>
 
@@ -261,12 +260,12 @@
                         <i class="fa-solid fa-cloud-sun"></i>
 
                         <div class="forecast-info">
-                            <h3>Mpn</h3>
-                            <p>Light Rain</p>
+                            <h3 id="forecast-day-4">Mon</h3>
+                            <p id="forecast-description-4">Light Rain</p>
                         </div>
 
-                        <strong>31°</strong>
-                        <span>24°</span>
+                        <strong id="forecast-max-4">31°</strong>
+                        <span id="forecast-min-4">24°</span>
 
                     </div>
 
@@ -275,40 +274,12 @@
                         <i class="fa-solid fa-cloud-sun"></i>
 
                         <div class="forecast-info">
-                            <h3>Tue</h3>
-                            <p>Cloudy</p>
+                            <h3 id="forecast-day-5">Tue</h3>
+                            <p id="forecast-description-5">Cloudy</p>
                         </div>
 
-                        <strong>38°</strong>
-                        <span>23°</span>
-
-                    </div>
-
-                    <div class="forecast">
-
-                        <i class="fa-solid fa-cloud-sun"></i>
-
-                        <div class="forecast-info">
-                            <h3>Wed</h3>
-                            <p>Partly Cloudy</p>
-                        </div>
-
-                        <strong>31°</strong>
-                        <span>24°</span>
-
-                    </div>
-
-                    <div class="forecast">
-
-                        <i class="fa-solid fa-cloud-sun"></i>
-
-                        <div class="forecast-info">
-                            <h3>Thu</h3>
-                            <p>Sunny</p>
-                        </div>
-
-                        <strong>32°</strong>
-                        <span>25°</span>
+                        <strong id="forecast-max-5">38°</strong>
+                        <span id="forecast-min-5">23°</span>
 
                     </div>
 
